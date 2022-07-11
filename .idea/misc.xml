@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/Users/kulka/AndroidStudioProjects/TaxiStand/app/src/main/res/drawable/taxi_pic_1.xml" value="0.2265" />
         <entry key="..\:/Users/kulka/AndroidStudioProjects/TaxiStand/app/src/main/res/drawable/taxi_pic_home_background.xml" value="0.2265" />
-        <entry key="..\:/Users/kulka/AndroidStudioProjects/TaxiStand/app/src/main/res/layout/fragment_home_page.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/kulka/AndroidStudioProjects/TaxiStand/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/kulka/AndroidStudioProjects/TaxiStand/app/src/main/res/layout/fragment_home_page.xml" value="0.2" />
       </map>
     </option>
   </component>

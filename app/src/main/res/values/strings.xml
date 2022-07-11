@@ -2,4 +2,5 @@
     <string name="app_name">Taxi Stand</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_info">Taxi Stand proactively offers its ride-hailing services across the country with well-maintained cars and professionally trained driver-partners.</string>
 </resources>
