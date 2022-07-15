@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_selectLocationFragment"
             app:destination="@id/selectLocationFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_bookingsFragment"
+            app:destination="@id/bookingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/selectLocationFragment"
@@ -45,5 +48,25 @@
         <action
             android:id="@+id/action_selectCarFragment_to_dateAndTimeFragment"
             app:destination="@id/dateAndTimeFragment" />
+        <action
+            android:id="@+id/action_selectCarFragment_to_selectRideFragment"
+            app:destination="@id/selectRideFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingsFragment"
+        android:name="com.example.taxistand.BookingsFragment"
+        android:label="fragment_bookings"
+        tools:layout="@layout/fragment_bookings" >
+        <action
+            android:id="@+id/action_bookingsFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectRideFragment"
+        android:name="com.example.taxistand.SelectRideFragment"
+        android:label="SelectRideFragment" >
+        <action
+            android:id="@+id/action_selectRideFragment_to_selectCarFragment"
+            app:destination="@id/selectCarFragment" />
     </fragment>
 </navigation>

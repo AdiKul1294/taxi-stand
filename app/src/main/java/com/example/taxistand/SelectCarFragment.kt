@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.taxistand.databinding.FragmentSelectCarBinding
 
 class SelectCarFragment : Fragment() {
@@ -20,6 +21,11 @@ class SelectCarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.cardView9.setOnClickListener {
+            findNavController().navigate(R.id.action_selectCarFragment_to_selectRideFragment)
+        }
+
         binding.cardView1.setOnClickListener {
             binding.cardView1.alpha = 1.0F
             binding.cardView5.alpha = 1.0F

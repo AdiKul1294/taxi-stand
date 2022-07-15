@@ -24,5 +24,8 @@ class HomePageFragment : Fragment() {
         binding.bookCabBtnHome.setOnClickListener {
             findNavController().navigate(R.id.action_homePageFragment_to_selectLocationFragment)
         }
+        binding.myBookingsBtnHome.setOnClickListener {
+            findNavController().navigate(R.id.action_homePageFragment_to_bookingsFragment)
+        }
     }
 }
