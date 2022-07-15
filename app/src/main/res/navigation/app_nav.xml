@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.taxistand.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_selectLocationFragment"
+            app:destination="@id/selectLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLocationFragment"
+        android:name="com.example.taxistand.SelectLocationFragment"
+        android:label="fragment_select_location"
+        tools:layout="@layout/fragment_select_location" >
+        <action
+            android:id="@+id/action_selectLocationFragment_to_dateAndTimeFragment"
+            app:destination="@id/dateAndTimeFragment" />
+        <action
+            android:id="@+id/action_selectLocationFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateAndTimeFragment"
+        android:name="com.example.taxistand.DateAndTimeFragment"
+        android:label="fragment_date_and_time"
+        tools:layout="@layout/fragment_date_and_time" >
+        <action
+            android:id="@+id/action_dateAndTimeFragment_to_selectCarFragment"
+            app:destination="@id/selectCarFragment" />
+        <action
+            android:id="@+id/action_dateAndTimeFragment_to_selectLocationFragment"
+            app:destination="@id/selectLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectCarFragment"
+        android:name="com.example.taxistand.SelectCarFragment"
+        android:label="SelectCarFragment" >
+        <action
+            android:id="@+id/action_selectCarFragment_to_dateAndTimeFragment"
+            app:destination="@id/dateAndTimeFragment" />
+    </fragment>
+</navigation>

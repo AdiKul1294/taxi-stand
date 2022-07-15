@@ -7,22 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
-import com.example.taxistand.databinding.FragmentHomePageBinding
+import com.example.taxistand.databinding.FragmentDateAndTimeBinding
 
-class HomePageFragment : Fragment() {
-    lateinit var binding: FragmentHomePageBinding
+class DateAndTimeFragment : Fragment() {
+    lateinit var binding: FragmentDateAndTimeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home_page, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_date_and_time, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.bookCabBtnHome.setOnClickListener {
-            findNavController().navigate(R.id.action_homePageFragment_to_selectLocationFragment)
+        binding.nextCvDtf.setOnClickListener {
+            findNavController().navigate(R.id.action_dateAndTimeFragment_to_selectCarFragment)
         }
     }
+
 }

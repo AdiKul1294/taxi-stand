@@ -1,104 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FDFDFA"
-    android:fitsSystemWindows="true"
-    tools:context=".HomePageFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:src="@mipmap/taxi_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <data>
 
-    <ImageView
-        android:id="@+id/taxi_img_home"
-        android:layout_width="218dp"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@mipmap/taxi_pic_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#E8E8E6"
+        android:fitsSystemWindows="true"
+        tools:context=".HomePageFragment">
 
-    <TextView
-        android:id="@+id/welcome_msg"
-        android:layout_width="200dp"
-        android:layout_height="82dp"
-        android:fontFamily="@font/days_one"
-        android:text="Welcome User,"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_msg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/taxi_img_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/app_logo" />
 
-    <TextView
-        android:id="@+id/app_info"
-        android:layout_width="182dp"
-        android:layout_height="152dp"
-        android:fontFamily="@font/days_one"
-        android:text="@string/app_info"
-        android:textColor="#7E7D7D"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443" />
+        <ImageView
+            android:id="@+id/taxi_img_home"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/taxi_pic_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/book_cab_btn_home"
-        style="@style/ButtonStyle"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
-        android:fontFamily="@font/days_one"
-        android:text="Book Cab"
-        android:textColor="#ECC141"
-        android:textSize="18sp"
-        app:backgroundTint="#000000"
-        app:cornerRadius="25sp"
-        app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        <TextView
+            android:id="@+id/welcome_msg"
+            android:layout_width="200dp"
+            android:layout_height="82dp"
+            android:fontFamily="@font/days_one"
+            android:text="Welcome User,"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toEndOf="@+id/taxi_img_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.269" />
 
-    <Button
-        android:id="@+id/my_bookings_btn_home"
-        style="@style/ButtonStyle"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
-        android:fontFamily="@font/days_one"
-        android:text="My Bookings"
-        android:textColor="#D8AF35"
-        android:textSize="18sp"
-        app:backgroundTint="#D5D4D0"
-        app:cornerRadius="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        <TextView
+            android:id="@+id/app_info"
+            android:layout_width="182dp"
+            android:layout_height="152dp"
+            android:fontFamily="@font/days_one"
+            android:text="@string/app_info"
+            android:textAlignment="center"
+            android:textColor="#7E7D7D"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toEndOf="@+id/taxi_img_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.443" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/book_cab_btn_home"
+            style="@style/ButtonStyle"
+            android:layout_width="180dp"
+            android:layout_height="75dp"
+            android:fontFamily="@font/days_one"
+            android:text="Book Cab"
+            android:textColor="#FFC107"
+            android:textSize="18sp"
+            app:backgroundTint="#000000"
+            app:cornerRadius="25sp"
+            app:iconTint="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/taxi_img_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.653" />
+
+        <Button
+            android:id="@+id/my_bookings_btn_home"
+            style="@style/ButtonStyle"
+            android:layout_width="180dp"
+            android:layout_height="75dp"
+            android:fontFamily="@font/days_one"
+            android:text="My Bookings"
+            android:textColor="#FFC107"
+            android:textSize="18sp"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/taxi_img_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.782" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
