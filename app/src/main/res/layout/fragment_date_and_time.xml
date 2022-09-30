@@ -63,7 +63,9 @@
                 android:id="@+id/time_edit_dtf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="HR : MIN : SEC" />
+                android:hint="HR : MIN : SEC"
+                android:inputType="datetime"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +86,9 @@
                 android:id="@+id/date_edit_dtf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="DD/MM/YYYY" />
+                android:hint="DD/MM/YYYY"
+                android:inputType="date"
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.cardview.widget.CardView

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "354069075012",
+    "project_id": "taxi-stand-55bbf",
+    "storage_bucket": "taxi-stand-55bbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354069075012:android:2a3d1ac2754719ff679811",
+        "android_client_info": {
+          "package_name": "com.example.taxistand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354069075012-1s0i2kmkurt6lmjf737ijf2nouhs421u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9MloCbJTb8iVSlViJ6fQofvhu6YkCbfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354069075012-1s0i2kmkurt6lmjf737ijf2nouhs421u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

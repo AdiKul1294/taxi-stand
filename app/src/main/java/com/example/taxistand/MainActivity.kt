@@ -1,15 +1,20 @@
 package com.example.taxistand
 
-import androidx.appcompat.app.AppCompatActivity
+import android.hardware.camera2.params.SessionConfiguration
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import com.example.taxistand.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        supportActionBar?.hide()
+
     }
+
 }

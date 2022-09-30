@@ -6,10 +6,13 @@ import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taxistand.DataClasses.Car
+import com.example.taxistand.MainActivity
 import com.example.taxistand.R
+import com.example.taxistand.SelectRideFragment
 
 class SelectRideAdapter(val cars: List<Car>): RecyclerView.Adapter<SelectRideAdapter.SelectRideViewHolder>() {
 
@@ -27,6 +30,7 @@ class SelectRideAdapter(val cars: List<Car>): RecyclerView.Adapter<SelectRideAda
             findViewById<TextView>(R.id.car_num_tv_sci).text = cars[position].carNum
             findViewById<TextView>(R.id.rate_tv_sci).text = cars[position].carRate
         }
+
     }
 
     override fun getItemCount(): Int {

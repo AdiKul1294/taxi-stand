@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taxistand.DataClasses.Booking
 import com.example.taxistand.R
 
-class MyBookingsAdapter(val bookings: List<Booking>): RecyclerView.Adapter<MyBookingsAdapter.MyBookingsViewHolder>(){
+public class MyBookingsAdapter(val bookings: List<Booking>): RecyclerView.Adapter<MyBookingsAdapter.MyBookingsViewHolder>(){
 
     inner class MyBookingsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 

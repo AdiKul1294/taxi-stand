@@ -68,5 +68,8 @@
         <action
             android:id="@+id/action_selectRideFragment_to_selectCarFragment"
             app:destination="@id/selectCarFragment" />
+        <action
+            android:id="@+id/action_selectRideFragment_to_bookingsFragment"
+            app:destination="@id/bookingsFragment" />
     </fragment>
 </navigation>

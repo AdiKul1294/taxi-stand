@@ -23,6 +23,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/select_ride_cv_srf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.5"
@@ -34,7 +35,7 @@
             app:layout_constraintVertical_bias="0.099">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/select_ride_txt_srf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

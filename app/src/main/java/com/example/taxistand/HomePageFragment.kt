@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.taxistand.databinding.FragmentHomePageBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.*
+import com.google.firebase.ktx.Firebase
 
 class HomePageFragment : Fragment() {
     lateinit var binding: FragmentHomePageBinding
@@ -16,6 +19,7 @@ class HomePageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home_page, container, false)
+
         return binding.root
     }
 
@@ -27,5 +31,19 @@ class HomePageFragment : Fragment() {
         binding.myBookingsBtnHome.setOnClickListener {
             findNavController().navigate(R.id.action_homePageFragment_to_bookingsFragment)
         }
+
+        binding.welcomeMsg.text = "Welcome, "
+
+        val fAuth = FirebaseAuth.getInstance()
+        val fStore = FirebaseFirestore.getInstance()
+        val userId = fAuth.currentUser!!.uid.toString()
+
+        val dRef: DocumentReference = fStore.collection("users").document(userId)
+        dRef.addSnapshotListener(object: EventListener<DocumentSnapshot>{
+            override fun onEvent(value: DocumentSnapshot?, error: FirebaseFirestoreException?) {
+                binding.welcomeMsg.append(value!!.getString("first_name"))
+            }
+
+        })
     }
 }
