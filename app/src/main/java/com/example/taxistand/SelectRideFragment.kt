@@ -27,14 +27,14 @@ class SelectRideFragment : Fragment() {
         enterTransition = inflater.inflateTransition(R.transition.slide_right)
 
         var CarsList = mutableListOf<Car>(
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus)
+            Car("Swift Dzire", "MH 75 A 1254", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 B 1255", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 C 1256", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 D 1257", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 A 1254", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 B 1255", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 C 1256", "Rs 500 / day", R.drawable.urus),
+            Car("Swift Dzire", "MH 75 D 1257", "Rs 500 / day", R.drawable.urus)
         )
 
         val adapter = SelectRideAdapter(CarsList)
@@ -43,8 +43,12 @@ class SelectRideFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
 
-        binding.selectRideCvSrf.setOnClickListener{
-            DataBase.isCabBooked = true
+        binding.selectCvSrf.setOnClickListener{
+            Toast.makeText(
+                activity,
+                "Cab Booked Successfully",
+                Toast.LENGTH_SHORT
+            )
             findNavController().navigate(R.id.action_selectRideFragment_to_bookingsFragment)
         }
 
