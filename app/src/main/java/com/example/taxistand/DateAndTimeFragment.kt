@@ -41,16 +41,6 @@ class DateAndTimeFragment : Fragment() {
 
             var bookingNo = DataBase.bookingNo
 
-            /*
-            val dRef1 = fStore.collection("Booking Num").document(userId)
-            dRef1.addSnapshotListener { value, error ->
-                bookingNo = Integer.parseInt(value!!.getString("no_of_bookings").toString())
-            }
-
-
-            //DataBase.bookingNo++
-            */
-
             val dRef1 = fStore.collection("Booking Num").document(userId)
             val user = hashMapOf<String, String>()
             user.put("no_of_bookings", bookingNo.toString())
