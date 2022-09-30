@@ -56,5 +56,14 @@ class BookingsFragment : Fragment() {
 
         return binding.root
     }
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.action_bookingsFragment_to_homePageFragment)
+            }
+        })
+    }
 
 }
